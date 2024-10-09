@@ -1,23 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import React, { useRef } from "react";
+import React from "react";
 
 const Page = () => {
-  const textRef = useRef<HTMLDivElement>(null);
-
-  const handleSpeech = () => {
-    if (textRef.current) {
-      const text = textRef.current.innerText || "";
-      const speech = new SpeechSynthesisUtterance(text);
-      speech.lang = "en-US"; // Adjust the language if needed
-      window.speechSynthesis.speak(speech);
-    }
+  const handleAudioPlay = () => {
+    const audio = new Audio("/opis.mp3"); // Ensure the file is in the public folder or set the correct path.
+    audio.play();
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[100dvh] px-4 md:px-6 py-12 md:py-24 bg-[#2a2a2a]">
-      <div ref={textRef} className="max-w-xl text-center space-y-6">
+      <div className="max-w-xl text-center space-y-6">
         <h1 className="text-4xl md:text-5xl font-bold text-[#e0e0e0]">
           Welcome to Memory Walk
         </h1>
@@ -36,7 +30,7 @@ const Page = () => {
         </div>
       </div>
       <button
-        onClick={handleSpeech}
+        onClick={handleAudioPlay}
         className="mt-4 inline-flex h-10 items-center justify-center px-6 text-sm font-medium bg-[#37aa9d] text-white shadow-sm hover:bg-[#2f8b7e] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-lg"
       >
         Read Aloud
