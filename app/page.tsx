@@ -22,6 +22,12 @@ const Page = () => {
         </p>
         <div className="flex justify-center gap-4">
           <Link
+            href="/dashboard"
+            className="inline-flex h-10 items-center justify-center  px-6 text-sm font-medium text-primary focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 text-ellipsis ml-1 bg-[#183534] hover:bg-[#183534] p-3 rounded-lg shadow-sm text-white"
+          >
+            Get Started
+          </Link>
+          <Link
             href="/about"
             className="inline-flex h-10 items-center justify-center px-6 text-sm font-medium bg-[#3d3d3d] text-white shadow-sm hover:bg-[#575757] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring rounded-lg"
           >
