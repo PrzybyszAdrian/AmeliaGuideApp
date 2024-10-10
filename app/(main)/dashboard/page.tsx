@@ -1,3 +1,5 @@
+import CurvedlineChart from "@/components/Chart";
+
 export default function DashBoardPage() {
   return (
     <div className="flex flex-col bg-[#2a2a2a] text-[#e0e0e0] overflow-y-auto h-[100vh]">
