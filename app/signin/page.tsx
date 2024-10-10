@@ -80,7 +80,7 @@ const SignIn = () => {
           <Button
             className="w-full overflow-hidden text-ellipsis ml-1 bg-[#183534] hover:bg-[#183534] p-3 rounded-lg shadow-sm"
             onClick={() => {
-              router.push("/dashboard");
+              router.push("/about");
             }}
           >
             <span className="mr-2">Continue as</span>
